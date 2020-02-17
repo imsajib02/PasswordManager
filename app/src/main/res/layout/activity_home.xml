@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:background="@color/colorActivityBackground"
+    tools:context="com.imsajib02.passwordmanager.HomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorActivityBackground"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@color/colorWhite"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <View
+        android:id="@+id/myview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/my_toolbar"/>
+
+    <!--<include layout="@layout/layout_terms_conditions"-->
+        <!--android:id="@+id/tandc"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/my_toolbar"-->
+        <!--android:visibility="visible">-->
+    <!--</include>-->
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_33sdp"
+        android:layout_below="@id/my_toolbar"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/searchbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/my_edittext2"
+                android:paddingLeft="@dimen/_13sdp"
+                android:cursorVisible="false"
+                android:textCursorDrawable="@null"
+                android:inputType="text"
+                android:hint="Title"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="#9ed2cfcf"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="2.5">
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mybutton2"
+                android:textColor="@color/colorTextColor"
+                android:text="search"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearlayout"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_20sdp">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/text_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerview"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:text="You have no data"
+        android:visibility="gone"
+        android:textSize="@dimen/_18sdp"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextColor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_no_data"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/no_data_add_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mytext1"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                android:gravity="right"
+                android:textColor="@color/colorholobluedark"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7">
+
+            <TextView
+                android:id="@+id/text_or"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:visibility="gone"
+                android:textSize="@dimen/_13sdp"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextColor"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/no_data_restore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mytext2"
+                android:visibility="gone"
+                android:textSize="@dimen/_13sdp"
+                android:gravity="left"
+                android:textColor="@color/colorholobluedark"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
