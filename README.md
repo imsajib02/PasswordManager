@@ -6,7 +6,7 @@ Store and manage your passwords with **PasswordManager**. The data are stored in
 * **Fingerprint authentication**
 * **Security question for pin recovery**
 * **Add, delete, update data**
-* **DES Encryoption of data**
+* **DES Encryption of data**
 * **Change pin & recovery credentials**
 * **Backup & restore data using Google account**
 * **Auto backup**
